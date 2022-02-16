@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Suvidha Foundation</title>
+    <style>
+        body{
+          margin: 0;
+          padding: 0;
+          font-family: sans-serif;
+        }
+        main{
+          margin: 5vh 15%;
+        }
+        h1{
+          font-size: 40px;
+          font-weight: 400;
+          text-align: center;
+        }
+        img{
+          width:50%;
+          height:auto;
+        }
+        p{
+          text-align: justify;
+          font-size: 18px;
+        }
+        label{
+            position: absolute;
+            width: 45px;
+            height: 22px;
+            right: 20px;
+            top: 20px;
+            border: 2px solid;
+            border-radius: 20px;
+        }
+        label:before{
+            position: absolute;
+            content: '';
+            width:20px;
+            height: 20px;
+            left: 1px;
+            top: 1px;
+            border-radius: 50%;
+            background: #000;
+            cursor: pointer;
+            transition: 0.4s;
+        }
+        label.active:before{
+            left: 24px;
+            background: #fff;
+        }
+        body.night{
+            background: #000;
+            color: #fff;
+        }
+        @media screen and (min-width:900px) {
+          .respon{
+            display: flex;
+          }
+          
+        }
+    </style>
+</head>
+<body>
+
+
+    <img class="wave" src="img/wave.png">
+	<div class="container">
+		<div class="img">
+			<img src="img/bg.svg">
+		</div>
+		<div class="login-content">
+			<form action="index.html">
+				<img src="img/avatar.svg">
+				<h2 class="title">Welcome To <br> Analyitica </h2>
+           		<div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fas fa-user"></i>
+           		   </div>
+           		   <div class="div">
+           		   		<h5>Username</h5>
+           		   		<input type="text" class="input">
+           		   </div>
+           		</div>
+           		<div class="input-div pass">
+           		   <div class="i"> 
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+           		    	<h5>Password</h5>
+           		    	<input type="password" class="input">
+            	   </div>
+            	</div>
+            	<a href="outdex.html">Forgot Password?</a>
+            	<input type="submit" class="btn" value="Login">
+              <a href="indexi.html">Don't have account</a>
+            </form>
+        </div>
+    </div>
+    <header>
+        <label  id="dark-change"></label>
+      </header>
+
+      <script>
+        var content = document.getElementsByTagName('body')[0];
+        var darkMode = document.getElementById('dark-change');
+        darkMode.addEventListener('click', function(){
+            darkMode.classList.toggle('active');
+            content.classList.toggle('night');
+        })
+    </script>
+
+<script type="text/javascript" src="js/main.js"></script>
+
+
+</body>
+</html>
